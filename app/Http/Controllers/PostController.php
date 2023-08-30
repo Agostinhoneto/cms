@@ -28,19 +28,14 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        // Validar os dados do formulário
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'content' => 'required',
         ]);
-
-        // Criar um novo post com os dados validados
         $post = new Post;
         $post->title = $validatedData['title'];
         $post->content = $validatedData['content'];
         $post->save();
-
-        // Redirecionar para a página de exibição do post recém-criado
         return redirect('/posts/' . $post->id);
     }
 }

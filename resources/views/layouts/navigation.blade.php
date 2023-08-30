@@ -16,6 +16,24 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('empresa')" :active="request()->routeIs('empresa')">
+                        {{ __('Empresa') }}
+                    </x-nav-link>
+                </div>
+                 <!-- Navigation Links -->
+                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('paginas')" :active="request()->routeIs('paginas')">
+                        {{ __('Paginas') }}
+                    </x-nav-link>
+                </div>
+                  <!-- Navigation Links -->
+                  <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('secoes')" :active="request()->routeIs('secoes')">
+                        {{ __('Seções') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
