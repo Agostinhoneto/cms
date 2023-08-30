@@ -40,6 +40,7 @@
                 @endforeach
 
                 <nav>
+                    {{$posts->links()}}
                 </nav>
             </div>
 
