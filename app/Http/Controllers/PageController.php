@@ -20,7 +20,7 @@ class PageController extends Controller
 
     public function store(Request $request)
     {
-        // Validação dos dados
+         // Validação dos dados
         // Criação da página
         // Redirecionamento para a lista de páginas
     }

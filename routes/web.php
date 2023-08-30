@@ -33,17 +33,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+/*-----------------------------------------------*/
+Route::get('/posts/index', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/show/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
+Route::put('/posts/{id}/udpate', [PostController::class, 'update'])->name('posts.update');
+Route::delete('/posts/{id}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
 
+/*-----------------------------------------------*/
+Route::get('/pages/index', [PageController::class, 'index'])->name('pages.index');
+Route::get('/pages/create', [PageController::class, 'create'])->name('pages.create');
+Route::post('/pages/store', [PageController::class, 'store'])->name('pages.store');
+Route::get('/pages/{id}/show', [PageController::class, 'show'])->name('pages.show');
+Route::get('/pages/{id}/edit', [PageController::class, 'edit'])->name('pages.edit');
+Route::put('/pages/{id}/udpate', [PageController::class, 'update'])->name('pages.update');
+Route::delete('/pages/{id}/delete', [PageController::class, 'destroy'])->name('pages.destroy');
 
-Route::get('/', [PageController::class, 'index']);
-Route::get('/pages/create', [PageController::class, 'create']);
-Route::post('/pages', [PageController::class, 'store']);
-Route::get('/pages/{page}', [PageController::class, 'show']);
-Route::get('/pages/{page}/edit', [PageController::class, 'edit']);
-Route::put('/pages/{page}', [PageController::class, 'update']);
-      
 require __DIR__.'/auth.php';
