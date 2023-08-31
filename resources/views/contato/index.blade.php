@@ -1,7 +1,6 @@
-@extends('layouts.app')
-
-@section('content')
-    <h1>Lista de Contato</h1>
+<x-app-layout>
+  
+<h1>Lista de Contato</h1>
     <a href="{{ route('contato.create') }}" class="btn btn-primary">Novo Contato</a>
 
     <table class="table">
@@ -12,9 +11,9 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($contatos as $contato)
+            @foreach($contatos as $contato)
                 <tr>
-                    <td>{{ $contato->title }}</td>
+                    <td>{{$contato->title}}</td>
                     <td>
                         <a href="{{ route('contato.show', $contato->id) }}" class="btn btn-info">Visualizar</a>
                         <a href="{{ route('contato.edit', $contato->id) }}" class="btn btn-warning">Editar</a>
@@ -24,4 +23,7 @@
             @endforeach
         </tbody>
     </table>
-@endsection
+    <x-abc.cde-xyz color="gray-400">
+        teste
+    </x-abc.cde-xyz>    
+</x-app-layout>

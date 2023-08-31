@@ -49,7 +49,7 @@ Route::get('/pages/{id}/edit', [PageController::class, 'edit'])->name('pages.edi
 Route::put('/pages/{id}/udpate', [PageController::class, 'update'])->name('pages.update');
 Route::delete('/pages/{id}/delete', [PageController::class, 'destroy'])->name('pages.destroy');
 /*-----------------------------------------------*/
-Route::get('/contato/index', [ContatoController::class, 'store'])->name('contato.store');
+Route::get('/contato/index', [ContatoController::class, 'index'])->name('contato.index');
 Route::get('/contato/create', [ContatoController::class, 'create'])->name('contato.create');
 Route::get('/contato/{id}/show', [ContatoController::class, 'show'])->name('contato.show');
 Route::get('/contato/{id}/edit', [ContatoController::class, 'edit'])->name('contato.edit');
